@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'subpage.dart';
 
 
 void main() => runApp(MyApp());
@@ -121,6 +122,21 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.comment,
+                size: 35.0,
+                color: Colors.white,
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SubPage()),);
+
+
+              },
+            ),
+          ],
+
         ),
         body: ListView(
           shrinkWrap: true,
